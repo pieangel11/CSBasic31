@@ -9,6 +9,7 @@ namespace CSBasic31
     class Program
     {
         string Var = "테스트";
+        //var something = "아하하";    // var 사용 불가
 
         static void Main(string[] args)
         {
@@ -164,6 +165,13 @@ namespace CSBasic31
             Console.WriteLine(_char.GetType());
             Console.WriteLine(_string.GetType());
             Console.WriteLine((221111111L).GetType());
+
+            var number3 = 100;
+            var number4 = "뮻";        // var은 선언과 동시에 할당을 해야함
+            var number5 = 100.0;
+            var number6 = 100.0F;
+            
+
             
 
         }
