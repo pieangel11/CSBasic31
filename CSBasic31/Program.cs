@@ -115,6 +115,23 @@ namespace CSBasic31
 
             bool TrueOrFalse = true;
 
+
+            int output = 0;
+            output += 52;       // output = output + 52;
+            output += 273;
+            output += 103;
+
+            Console.WriteLine(output);
+            output *= 2;
+            Console.WriteLine(output);
+
+            // 문자열 관련 복합 대입 연산자
+            String output2 = "Hello ";
+            output2 += "World";
+            output2 += "!";
+            Console.WriteLine(output2);
+
+
         }
     }
 }
