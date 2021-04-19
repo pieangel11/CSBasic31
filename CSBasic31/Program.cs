@@ -170,6 +170,21 @@ namespace CSBasic31
             var number4 = "뮻";        // var은 선언과 동시에 할당을 해야함
             var number5 = 100.0;
             var number6 = 100.0F;
+
+            string input = Console.ReadLine();
+            Console.WriteLine("input : " + input);
+            while(true)
+            {
+                input = Console.ReadLine();
+                if (input != "q")
+                {
+                    Console.WriteLine(input);
+                }
+                else
+                {
+                    break;
+                }
+            }
             
 
             
