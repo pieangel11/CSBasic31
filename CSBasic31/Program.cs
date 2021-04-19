@@ -131,6 +131,25 @@ namespace CSBasic31
             output2 += "!";
             Console.WriteLine(output2);
 
+            // 증감 연산자
+            int number = 10;                                // num 출력
+            Console.WriteLine(number++); // 11      10
+            Console.WriteLine(++number); // 12      12
+            Console.WriteLine(number--);   // 11      12
+            Console.WriteLine(--number);   // 10      10
+            Console.WriteLine(number);     // 10
+
+            number = 10;                                // num 출력
+            number++;
+            Console.WriteLine(number); // 11      10
+            ++number;
+            Console.WriteLine(number); // 12      12
+            number--;
+            Console.WriteLine(number--);   // 11      12
+            --number;
+            Console.WriteLine(number);   // 10      10
+            Console.WriteLine(number);     // 10
+
 
         }
     }
