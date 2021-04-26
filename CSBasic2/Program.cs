@@ -103,8 +103,47 @@ namespace CSBasic2
             Console.Write("숫자를 입력하세요:");
             int number7 = int.Parse(Console.ReadLine());
             Console.WriteLine(number7 > 0 ? "자연수" : "자연수 아님");
-            
 
+            Console.WriteLine("인사 판별기");
+            Console.Write("입력>");
+            String line = Console.ReadLine();
+            if (line.Contains("안녕"))
+            {
+                Console.WriteLine("안녕");
+            }
+            else
+            {
+                Console.WriteLine("^^*");
+            }
+
+            // 키입력 구분
+            ConsoleKeyInfo info;
+            bool isInput = true;
+            while(isInput)
+            {
+                info = Console.ReadKey();
+                switch(info.Key)
+                {
+                    case ConsoleKey.UpArrow:
+                        Console.Write("↑");
+                        break;
+                    case ConsoleKey.DownArrow:
+                        Console.Write("↓");
+                        break;
+                    case ConsoleKey.RightArrow:
+                        Console.Write("→");
+                        break;
+                    case ConsoleKey.LeftArrow:
+                        Console.Write("←");
+                        break;
+                    case ConsoleKey.Escape:
+                        isInput = false;
+                        break;
+                    default:
+                        Console.WriteLine("(╬▔皿▔)╯▔");
+                        break;
+                }
+            }
         }
     }
 }
