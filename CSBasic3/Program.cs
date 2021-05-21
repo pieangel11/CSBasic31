@@ -108,7 +108,35 @@ namespace CSBasic3
             string[] foodsArray = { "감자", "고구마", "토마토" };
             Console.WriteLine(string.Join(",", foodsArray));
 
-            
-         }
+            Console.Clear();
+            Console.WriteLine("포맷 중 : 0% [__________]");
+            for (int f = 0; f < 10; f++)
+            {
+                Console.SetCursorPosition(1, 1);
+                Console.WriteLine("포맷 중 : ");
+                Console.WriteLine((f + 1) * 10 + "%    [");
+                for (int f2 = 0; f2 < f + 1; f2++)
+                    Console.Write("#");
+                for (int f2 = f + 1; f2 < 10; f2++)
+                    Console.Write("_");
+                Console.WriteLine("J");
+                Thread.Sleep(1000);
+            }
+
+            int x = 1;
+            while (x < 50)
+            {
+                Console.Clear();
+                Console.SetCursorPosition(x, 5);
+                if (x % 3 == 0)
+                    Console.WriteLine("__@");
+                else if (x % 3 == 1)
+                    Console.WriteLine("_^@");
+                else
+                    Console.WriteLine("^_@");
+                Thread.Sleep(1000);
+                x++;
+            }
+        }
     }
 }
