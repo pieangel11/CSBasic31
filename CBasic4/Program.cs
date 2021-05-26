@@ -6,6 +6,28 @@ using System.Threading.Tasks;
 
 namespace CBasic4
 {
+
+    class MyPath
+    {
+        public int a;   //멤버변수
+        public static double PI = 3.141592;
+        public static void Hello()
+        {
+            //a = 3;      // 클래스에서는 멤버변수가 접근이 안됨
+            Console.WriteLine("Greeting~");
+        }
+    }
+    class Product
+    {
+        public string name = "default";
+        public int price = 1000;
+
+        public override string ToString()   //빠른작업 리펙토리 - 재정의 생성 - ToString체크
+        {
+            return this.name + " / " + this.price;
+        }
+    }
+
     class Car
     {
         int carNumber;
@@ -66,6 +88,15 @@ namespace CBasic4
             Console.WriteLine(Math.Round(52.273));
 
             Product product = new Product();
+            Console.WriteLine(product);
+            Product productA = new Product() { name = "감자", price = 2000 };
+            Console.WriteLine(productA);
+            Product productB = new Product() { name = " 고구마", price = 3000 };
+            Console.WriteLine(productB);
+
+            Console.WriteLine(MyPath.PI);
+            MyPath.Hello();
+
         }
     }
 
