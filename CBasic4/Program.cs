@@ -117,6 +117,34 @@ namespace CBasic4
                 new Student() { name = "함기훈", favorityFood = "밀크티" }
              };
 
+            // 시험에 나옴
+            foreach(var item in students)
+            {
+                Console.WriteLine(item.name + " : " + item.grade);
+            }
+
+           /* for(int i = 0; i  < students.Count; i++)
+            {
+                if(students[i].grade > 0)
+                {
+                    students.RemoveAt(i);
+                    i--;        //해결법
+                }
+            }*/
+
+            for (int i = students.Count - 1 ; i >= 0; i--)
+            {
+                if (students[i].grade > 0)
+                    students.RemoveAt(i);
+            }
+
+            foreach (var item in students)
+            {
+                Console.WriteLine(item.name + " : " + item.grade);
+            }
+            //여기까지 한 실습(시험에 나옴)
+
+
         }
     }
 
