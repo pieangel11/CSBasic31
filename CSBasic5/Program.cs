@@ -14,17 +14,40 @@ namespace CSBasic5
             Console.WriteLine(m1.Multi(52, 273));
             Console.WriteLine(m1.Multi(103, 32));
             m1.Print();
-            Console.WriteLine(m1.Sum(1, 100));
+            /*Console.WriteLine(m1.Sum(1, 100));
             Console.WriteLine(MyMath.Abs(52));
             Console.WriteLine(MyMath.Abs(273));
+            Console.WriteLine(MyMath.Abs(52.273f));
+            Console.WriteLine(MyMath.Abs(52.273));
+            Console.WriteLine(MyMath.Abs(30000000000));*/
+
+            Console.WriteLine(m1.Sum(1, 100));
+            MyMath.Abs(52);
+            MyMath.Abs(273);
+            MyMath.Abs(52.273f);
+            MyMath.Abs(52.273);
+            MyMath.Abs(30000000000);
         }
 
         class MyMath
         {
-            public static int Abs(int input)
+            public static void Abs(int input)
+            {
+                Console.WriteLine("정수:" + ((input < 0) ? -input : input));
+            }
+            public static void Abs(double input)
+            {
+                Console.WriteLine("더블:" + ((input < 0) ? -input : input));
+            }
+            public static void Abs(long input)
+            {
+                Console.WriteLine("롱:" + ((input < 0) ? -input : input));
+            }
+
+            /*public static int Abs(int input)
             {
                 return (input < 0) ? -input : input;
-                /*
+                *//*
                  if(input < 0)
                     {
                     return -input;
@@ -33,8 +56,16 @@ namespace CSBasic5
                 {
                     return input;
                 }
-                */
+                *//*
             }
+            public static double Abs(double input)
+            {
+                return (input < 0) ? -input : input;
+            }
+            public static long Abs(long input)
+            {
+                return (input < 0) ? -input : input;
+            }*/
         }
 
         class MultiClass
