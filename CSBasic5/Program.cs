@@ -31,6 +31,54 @@ namespace CSBasic5
             m1.somePublic();
             //m1.someDefault();
             //m1.somePrivate();
+
+            Product productA = new Product("감자", 2000);
+            Product productB = new Product("고구마", 3000);
+            Console.WriteLine(productA);
+            Console.WriteLine(productB);
+            Console.WriteLine(Product.counter +  "개 생성되었습니다.");
+
+            Console.WriteLine("첫 번째 위치");
+            Sample sample = new Sample();
+            //Console.WriteLine(Sample.value);
+            Console.WriteLine("두 번째 위치");
+            Console.WriteLine(Sample.value);
+            //Sample sample = new Sample();
+            Console.WriteLine("세 번째 위치");
+        }
+
+        class Sample
+        {
+            public static int value;
+            static Sample()
+            {
+                value = 10;
+                Console.WriteLine("정적 생성자 호출");
+            }
+        }
+
+        class Product
+        {
+            public static int counter = 0;
+            public int id;
+            public string name;
+            public int price;
+
+            /*우클릭 -> 빠른작업 및 리펙터링 -> 생성자*/
+            public Product(string name, int price)
+            {
+                Product.counter = Product.counter + 1;
+                this.id = Product.counter;
+                this.name = name;
+                this.price = price;
+            }
+
+            /*우클릭 -> 빠른작업 및 리펙터링 -> 재정의 생성(오버로딩)*/
+            public override string ToString()
+            {
+                return id + " : " + name;
+            }
+
         }
 
         class MyMath
